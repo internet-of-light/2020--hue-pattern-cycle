@@ -55,7 +55,7 @@ void loop() {
 }
 
 void iterateLights(){
-  for(int i; i = 0; i < 2){
+  for(int i = 0; i < 2; i++){
     lowerLightsCycle();
     delay(100);
     upperLightsCycle();
@@ -100,7 +100,7 @@ void lowerLightsPattern(){
       changeLight(14, patternTransition, "on", "true", "bri", "254", "hue", rv.col, "sat", "254");
       changeLight(11, patternTransition, "on", "true", "bri", "254", "hue", rv.col, "sat", "254");
       timerOne = currentTime;
-      delay(5000);
+      delay(1000);
       for (int i = 0; i < 9; i++){
         changeLight(lowerLights[i], 0, "on", "true", "bri", "50", "hue", rv.col, "sat", "0");
       }
@@ -133,7 +133,7 @@ void upperLightsPatternWave(){
 }
 
 void randomLightValues(){
-  rv.col = String(random(38000, 60000));
+  rv.col = String(random(40000, 60000));
   rv.bri = String(random(190, 254));
   rv.sat = String(random(200, 254));
   if (debug){
