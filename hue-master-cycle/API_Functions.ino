@@ -54,13 +54,13 @@ void changeGroup(byte groupNum, byte transitiontime, String parameter, String ne
   Serial.println("Attempting PUT: " + put_string + " for GROUP: " + String(groupNum));
 
   int httpResponseCode = http.PUT(put_string);
-  if (httpResponseCode == 200) {
-    String response = http.getString();
-    Serial.println("Response: " + response);
-  } else {
-    Serial.println("Error on sending PUT Request: ");
-    Serial.println(String(httpResponseCode));
-  }
+//  if (httpResponseCode == 200) {
+//    String response = http.getString();
+//    Serial.println("Response: " + response);
+//  } else {
+//    Serial.println("Error on sending PUT Request: ");
+//    Serial.println(String(httpResponseCode));
+//  }
   http.end();
 }
 
@@ -82,13 +82,13 @@ void changeLight(byte lightNum, byte transitiontime, String parameter, String ne
 
 
   int httpResponseCode = http.PUT(put_string);
-  if (httpResponseCode == 200) {
-    String response = http.getString();
-    Serial.println("Response: " + response);
-  } else {
-    Serial.println("Error on sending PUT Request: ");
-    Serial.println(String(httpResponseCode));
-  }
+//  if (httpResponseCode == 200) {
+//    String response = http.getString();
+//    Serial.println("Response: " + response);
+//  } else {
+//    Serial.println("Error on sending PUT Request: ");
+//    Serial.println(String(httpResponseCode));
+//  }
   http.end();
 }
 
