@@ -102,9 +102,6 @@ void lowerLightsPattern(){
       timerOne = currentTime;
       delay(1000);
       for (int i = 0; i < 9; i++){
-        changeLight(lowerLights[i], 0, "on", "true", "bri", "50", "hue", rv.col, "sat", "0");
-      }
-      for (int i = 0; i < 9; i++){
         changeLight(lowerLights[i], 0, "on", "true", "bri", "254", "hue", rv.col, "sat", "254");
       }
       for (int i = 0; i < 9; i++){
@@ -134,7 +131,7 @@ void upperLightsPatternWave(){
 
 void randomLightValues(){
   rv.col = String(random(40000, 60000));
-  rv.bri = String(random(190, 254));
+  rv.bri = String(random(210, 255));
   rv.sat = String(random(200, 254));
   if (debug){
     Serial.println("NEW VALUES");
